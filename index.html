@@ -1,0 +1,36 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+       <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="welcomeNote">
+                <h1>Jimmy’s Diner</h1>
+                <p>The best burgers and pizzas in town.</p>
+            </div>
+        </header>
+        <main >
+            <div id="item-render"></div>
+            <div id="order-container" >
+                    <p class="order marginAuto">Your Order</p>
+                    <div id="order-render"></div>
+                    <hr class="order-hr">
+                    <div class="flex">
+                        <p class="order">Total Price:</p>
+                        <p class="price total-price" id="total-price"></p>
+                     </div>
+                    <button class="btn" id="btn">Complet order</button>
+            </div>
+            <form id="cardDetails">
+                <label><span class="label-size"> Enter card details</span></lable>
+                <input type="text" name="cusName" placeholder="Enter your name" required>
+                <input type="text" name="cardNumber" maxlength="16" pattern="[0-9]{16}" placeholder="Enter card Details" required>
+                <input type="text" name="cardCvv" maxlength="3" pattern="[0-9]{3}" placeholder="Enter CVV" required>
+                <button id="order-btn" > Pay </button>
+            </form>
+            
+        </main>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
