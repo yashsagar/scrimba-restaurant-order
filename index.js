@@ -29,7 +29,7 @@ function renderItem() {
                     <p>${item.ingredients.toString()}</p>
                     <h3>$${item.price}</h3>
                 </div>
-                <img src="./images/plus-icon.png" alt="plus icon" class="plus-icon" 
+                <img src="images/plus-icon.png" alt="plus icon" class="plus-icon" 
                 data-order=${item.name}>
             </div>
             <hr>
