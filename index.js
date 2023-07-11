@@ -92,16 +92,18 @@ function orderRenderFunction(orderValue) {
     } else if (item.name === "Beer") {
       numOfOrder = Beer;
     }
+    if (numOfOrder > 0) {
+      orderList += `
+          <div class="flex">
+              <p class="order-item">${item.name}</p>
+              <p class="remove-item" data-cancel-order=${item.name} >remove</p>
+              <p class="price"><span class="priceCal">${numOfOrder} x $${
+        item.price
+      }</span> $${item.price * numOfOrder}</p>
+          </div>
+          `;
+    }
 
-    orderList += `
-        <div class="flex">
-            <p class="order-item">${item.name}</p>
-            <p class="remove-item" data-cancel-order=${item.name} >remove</p>
-            <p class="price"><span class="priceCal">${numOfOrder} x $${
-      item.price
-    }</span> $${item.price * numOfOrder}</p>
-        </div>
-        `;
     totalprice += item.price * numOfOrder;
   });
   orderRender.innerHTML = orderList;
